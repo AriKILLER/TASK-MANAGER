@@ -1,0 +1,8 @@
+1.. Marcar tareas como completadas mediante un boton con un tick
+1. Permitir borrar tareas pendientes mediante un boton con una X
+2. Permitir modificar tareas pendientes mediante un boton con un icono de un papel o algo
+3. Fecha limite para cumplir tareas o en caso que sean fechas como examenes, etc
+4. Poder filtrar las tareas por completar o pendientes por fecha, prioridad, nombre
+5. Poder borrar tareas completadas
+6. Modo nocturno
+7. Mejorar el estilo de esto en algun momento con Tailwind
