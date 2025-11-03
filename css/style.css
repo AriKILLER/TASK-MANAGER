@@ -3,19 +3,26 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #bcbcbc;
+}
+
+body {
+    background-color: #1fb8eb;
     color: #000000;
 }
+
 .icono {
     width: 20px;
     height: 20px;
     cursor: pointer;
     margin-left: 10px;
+    background-color: transparent;
 }
+
 .icono[alt="Completar"] {
     width: 25px;
     height: 25px;
 }
+
 .icono:hover {
     transform: scale(1.2);
     transition: transform 0.2s;
@@ -24,12 +31,38 @@
 .parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 8px;
+    grid-template-rows: auto auto 1fr;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
 }
     
 .div1 {
     grid-column: span 4 / span 4;
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.div1 h1 {
+    background-color: transparent;
+}
+
+.mensaje {
+    background-color: transparent;
+}
+
+.mensaje p {
+    background-color: transparent;
+}
+
+/* Contenedor para los divs 2, 3 y 4 */
+.div2, .div3, .div4 {
+    background-color: #dbdbdb;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.514);
 }
 
 .div2 {
@@ -37,16 +70,68 @@
     grid-row-start: 2;
 }
 
+.div2 h2, .div2 label, .div2 input, .div2 select, .div2 button, .div2 form {
+    background-color: transparent;
+}
+
+.div2 input, .div2 select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.div2 button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.div2 button:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
 .div3 {
     grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
     grid-row-start: 3;
+}
+
+.div3 h2, .div3 ul, .div3 select {
+    background-color: transparent;
+}
+
+.div3 select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-top: 15px;
 }
 
 .div4 {
     grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
-    grid-column-start: 3;
     grid-row-start: 3;
 }
-        
+
+.div4 h2, .div4 ul {
+    background-color: transparent;
+}
+
+/* Estilos para las listas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f5f5f5;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+}
