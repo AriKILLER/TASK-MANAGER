@@ -17,22 +17,26 @@ function agregarTarea(){
         lista.appendChild(elemento);
         document.getElementById('nueva-tarea').value = '';
         document.getElementById('descripcion-tarea').value = '';
-        document.getElementById('prioridad-tarea').value = 'baja';
+        document.getElementById('prioridad-tarea').value = '';
     }
 }
 
-function eliminarTarea(){
-    let lista = document.getElementById('lista-tareas');
+function eliminarTarea(icono){
+    let elementoTarea = icono.parentElement;
+    elementoTarea.remove();
 }
 
-function marcarCompletada(){
-    let lista = document.getElementById('lista-tareas');
+function marcarCompletada(icono){
+    let elementoTarea = icono.parentElement;
     let completadas = document.getElementById('lista-completadas');
-    let tarea = lista.value;
-    if(tarea){
-        let elemento = document.createElement('li');
-        elemento.innerHTML = tarea;
-        completadas.appendChild(elemento);
-        lista.removeChild(lista.selectedItem);
-    }
+    icono.remove();
+    let spanCompletada = document.createElement('span');
+    spanCompletada.className = 'completada';
+    spanCompletada.textContent = ' ';
+    elementoTarea.appendChild(spanCompletada);
+    completadas.appendChild(elementoTarea);
+}
+
+function editarTarea(icono){
+    
 }
