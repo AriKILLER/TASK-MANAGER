@@ -40,3 +40,4 @@ function marcarCompletada(icono){
 function editarTarea(icono){
     
 }
+

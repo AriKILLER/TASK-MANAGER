@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #1fb8eb;
+    background-color: #8e8e8e;
     color: #000000;
 }
 
@@ -59,7 +59,7 @@ body {
 
 /* Contenedor para los divs 2, 3 y 4 */
 .div2, .div3, .div4 {
-    background-color: #dbdbdb;
+    background-color: #d3d3d3;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.514);
@@ -134,4 +134,120 @@ li {
     margin: 10px 0;
     border-radius: 8px;
     border-left: 4px solid #4CAF50;
+}
+#calendar {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #d3d3d3;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.514);
+}
+
+/* Estilos para el contenedor principal de FullCalendar */
+#calendar .fc {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Encabezado del calendario (título y botones) */
+#calendar .fc-toolbar {
+    background-color: #000000;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0 !important;
+}
+
+#calendar .fc-toolbar-title {
+    color: #ffffff !important;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#calendar .fc-button {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+#calendar .fc-button:hover {
+    background-color: #8e8e8e !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+#calendar .fc-button-active {
+    background-color: #8e8e8e !important;
+    color: #ffffff !important;
+}
+
+/* Encabezados de los días de la semana */
+#calendar .fc-col-header-cell {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    padding: 12px;
+    border-color: #ddd;
+    color: #000000;
+}
+
+/* Celdas de los días */
+#calendar .fc-daygrid-day {
+    background-color: #ffffff;
+    border-color: #e0e0e0;
+    transition: background-color 0.2s;
+}
+
+#calendar .fc-daygrid-day:hover {
+    background-color: #f8f8f8;
+}
+
+/* Números de los días */
+#calendar .fc-daygrid-day-number {
+    color: #000000;
+    font-size: 14px;
+    padding: 8px;
+}
+
+/* Día actual destacado */
+#calendar .fc-day-today {
+    background-color: #e8f5e9 !important;
+}
+
+#calendar .fc-day-today .fc-daygrid-day-number {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Eventos en el calendario */
+#calendar .fc-event {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 12px;
+    color: white;
+}
+
+#calendar .fc-event:hover {
+    background-color: #45a049;
+}
+
+/* Días de otros meses (grisáceos) */
+#calendar .fc-daygrid-day.fc-day-other {
+    background-color: #fafafa;
+}
+
+#calendar .fc-daygrid-day.fc-day-other .fc-daygrid-day-number {
+    color: #999;
 }
